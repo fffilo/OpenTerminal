@@ -1,0 +1,24 @@
+[
+	{
+		"command": "open_terminal",
+		"args": {
+			"paths": ["?filename"]
+		},
+		"caption": "Open in Terminal"
+	},
+	{
+		"command": "open_file",
+		"args": {
+			"file": "${packages}/Open Terminal/OpenTerminal.sublime-settings"
+		},
+		"caption": "Preferences: OpenTerminal Settings - Default"
+	},
+	{
+		"command": "open_file",
+		"args":
+		{
+			"file": "${packages}/User/OpenTerminal.sublime-settings"
+		},
+		"caption": "Preferences: OpenTerminal Settings - User"
+	}
+]

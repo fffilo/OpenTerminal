@@ -1,0 +1,4 @@
+// As always, please edit User/OpenTerminal.sublime-settings rather than this file.
+{
+	"command": "gnome-terminal --working-directory=\"{0}\"",
+}

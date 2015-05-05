@@ -1,0 +1,12 @@
+[
+	{
+		"caption": "-"
+	},
+	{
+		"command": "open_terminal",
+		"args": {
+			"paths": []
+		},
+		"caption": "Open in Terminal"
+	}
+]
