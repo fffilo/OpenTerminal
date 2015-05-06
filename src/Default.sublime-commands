@@ -9,7 +9,7 @@
 	{
 		"command": "open_file",
 		"args": {
-			"file": "${packages}/Open Terminal/OpenTerminal.sublime-settings"
+			"file": "${packages}/OpenTerminal/OpenTerminal (${platform}).sublime-settings"
 		},
 		"caption": "Preferences: OpenTerminal Settings - Default"
 	},
