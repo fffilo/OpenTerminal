@@ -19,3 +19,11 @@ Replace `~/.config/sublime-text-3/Packages/` with your path. On OSX this is ussu
 ![OpenTerminal Side Bar](screenshot-2.png)
 
 ![OpenTerminal Command](screenshot-3.png)
+
+### Settings
+
+If you wish to change your terminal application (in my example instead of using `gnome-terminal` I will use `terminator`) just change command in your settings:
+
+	{
+		"command": "terminator --working-directory=\"{0}\"",
+	}
