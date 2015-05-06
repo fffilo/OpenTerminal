@@ -5,7 +5,8 @@ A SublimeText plugin to add a **Open in Terminal** menu option...
 
 ### How to install
 
-	# replace ~/.config/sublime-text-3/Packages/ with if necessary
+Clone this repository into you sublime packages directory (replace `~/.config/sublime-text-3/Packages/` with your path):
+
 	cd ~/.config/sublime-text-3/Packages/
 	git clone https://github.com/fffilo/OpenTerminal.git
 
