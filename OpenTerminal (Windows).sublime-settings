@@ -1,4 +1,4 @@
 // As always, please edit User.sublime-settings rather than this file.
 {
-	"command": "start \"Terminal\" cmd \"cd \\\"{0}\\\"\"",
+	"command": "cd \"{0}\" && start \"Terminal\" cmd",
 }
