@@ -32,7 +32,7 @@ class OpenTerminal(sublime_plugin.WindowCommand):
     def run(self, paths):
         # get command from settings
         settings = sublime.load_settings("OpenTerminal.sublime-settings")
-        command = settings.get("command", "gnome-terminal --working-directory=\"{0}\"")
+        command = settings.get("command", [])[sublime.platform()]
         paths = self._get_paths(paths)
 
         # add home directory if list is empty
