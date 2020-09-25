@@ -18,13 +18,33 @@ A SublimeText plugin to add a **Open in Terminal** menu option...
 
 ### Settings
 
-If you wish to change your terminal application (in my example instead of using `gnome-terminal` I will use `terminator`) just change command in your settings (`Preferences → Package Settings → Open Terminal → Settings - User`):
+You can change your terminal application in your settings (`Preferences → Package Settings → Open Terminal → Settings - User`).
 
-```diff
+The `command` may be either a direct string:
+
+###### Windows
+```JSON
+"command": "cd \"{0}\" && start \"Terminal\" cmd"
+```
+
+###### Linux
+
+```JSON
+"command": "gnome-terminal --working-directory=\"{0}\""
+```
+
+###### OSX
+
+```JSON
+"command": "open -a Terminal \"{0}\""
+```
+
+or it may be a dictionary keyed off what `sublime.platform()` returns, so it may be customized on a per-platform basis:
+
+```JSON
 {
 	"command": {
--		"linux": "gnome-terminal --working-directory=\"{0}\"",
-+		"linux": "terminator --working-directory=\"{0}\"",
+		"linux": "gnome-terminal --working-directory=\"{0}\"",
 		"osx": "open -a Terminal \"{0}\"",
 		"windows": "cd \"{0}\" && start \"Terminal\" cmd"
 	}

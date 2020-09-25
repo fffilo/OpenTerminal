@@ -2,7 +2,9 @@
 {
 	"command": {
 		"linux": "gnome-terminal --working-directory=\"{0}\"",
+		// "linux": "terminator --working-directory=\"{0}\"",
 		"osx": "open -a Terminal \"{0}\"",
+		// "command": "open -a iTerm \"{0}\"",
 		"windows": "cd \"{0}\" && start \"Terminal\" cmd"
 	}
 }
