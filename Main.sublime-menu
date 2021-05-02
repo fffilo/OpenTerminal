@@ -15,7 +15,7 @@
 							{
 								"command": "open_file",
 								"args": {
-									"file": "${packages}/OpenTerminal/OpenTerminal (${platform}).sublime-settings"
+									"file": "${packages}/OpenTerminal/OpenTerminal.sublime-settings"
 								},
 								"caption": "Settings - Default"
 							},

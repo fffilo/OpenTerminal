@@ -5,12 +5,8 @@ A SublimeText plugin to add a **Open in Terminal** menu option...
 
 ### How to install
 
-Clone this repository into you sublime packages directory. On linux you would do something like this:
-
-	cd ~/.config/sublime-text-3/Packages/
-	git clone https://github.com/fffilo/OpenTerminal.git
-
-Replace `~/.config/sublime-text-3/Packages/` with your path. On OSX this is ussualy `~/Library/Application Support/Sublime Text 3/Packages`, and `C:\Program Files\Sublime Text 3\Packages` on Windows.
+- Add Repository：`Preference` → `Packages Control` → Select `Add Repository`, Input: `https://github.com/fffilo/OpenTerminal`, Enter.
+- Install Package：`Preference` → `Packages Control` → Select `Install Package`, Input: `OpenTerminal`, Enter.
 
 ### How to use
 
@@ -22,8 +18,35 @@ Replace `~/.config/sublime-text-3/Packages/` with your path. On OSX this is ussu
 
 ### Settings
 
-If you wish to change your terminal application (in my example instead of using `gnome-terminal` I will use `terminator`) just change command in your settings (`Preferences → Package Settings → Open Terminal → Settings - User`):
+You can change your terminal application in your settings (`Preferences → Package Settings → Open Terminal → Settings - User`).
 
-	{
-		"command": "terminator --working-directory=\"{0}\"",
+The `command` may be either a direct string:
+
+###### Windows
+```JSON
+"command": "cd \"{0}\" && start \"Terminal\" cmd"
+```
+
+###### Linux
+
+```JSON
+"command": "gnome-terminal --working-directory=\"{0}\""
+```
+
+###### OSX
+
+```JSON
+"command": "open -a Terminal \"{0}\""
+```
+
+or it may be a dictionary keyed off what `sublime.platform()` returns, so it may be customized on a per-platform basis:
+
+```JSON
+{
+	"command": {
+		"linux": "gnome-terminal --working-directory=\"{0}\"",
+		"osx": "open -a Terminal \"{0}\"",
+		"windows": "cd \"{0}\" && start \"Terminal\" cmd"
 	}
+}
+```
